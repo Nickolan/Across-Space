@@ -1,0 +1,23 @@
+.landing-content {
+  background: url("https://i2.wp.com/imagenesgratis.com.es/wp-content/uploads/2015/08/universe-wallpaper-hd-iphone.jpg?fit=1920%2C1200&ssl=1");
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+}
+.landing-content h1 {
+  color: rgb(255, 255, 255);
+  font-size: 150px;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+.landing-content img {
+  height: 350px;
+  width: auto;
+}/*# sourceMappingURL=landing.component.css.map */

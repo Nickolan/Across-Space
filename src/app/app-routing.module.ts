@@ -2,15 +2,20 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingComponent } from './landing/landing.component';
 import { HomeComponent } from './home/home.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   {
-    path: 'start',
+    path: '',
     component: LandingComponent,
   },
   {
     path: 'home',
     component: HomeComponent
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
   }
 ];
 

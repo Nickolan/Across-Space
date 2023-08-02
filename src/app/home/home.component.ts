@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  array = [
+    {
+      image: 'https://i.pinimg.com/originals/a1/01/e2/a101e22fc458c1110d418ee309f240c8.png'
+    }
+  ];
 }

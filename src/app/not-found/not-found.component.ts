@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+//import {notFoundImage} from './components/notFoundPage.png';
 
 @Component({
   selector: 'app-not-found',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./not-found.component.css']
 })
 export class NotFoundComponent {
-
+  
 }

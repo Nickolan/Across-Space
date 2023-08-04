@@ -1,0 +1,17 @@
+div{
+    ul{
+        display: grid;
+        grid-template-rows: 250px 250px 250px;
+        grid-template-columns: 250px 250px 250px;
+        padding-top: 10px;
+        row-gap: 30px;
+        column-gap: 350px;
+        #spaceBody{
+            list-style: none;
+            img{
+                width: 90%;
+                height: 90%;
+            }
+        }
+    }
+}

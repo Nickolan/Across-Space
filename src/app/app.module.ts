@@ -9,6 +9,8 @@ import { DetailComponent } from './detail/detail.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { SharedModule } from './shared/shared.module';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ListElementsComponent } from './list-elements/list-elements.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     LandingComponent,
     DetailComponent,
     NotFoundComponent,
+    ListElementsComponent,
+    LoginFormComponent,
   ],
   imports: [
     BrowserModule,

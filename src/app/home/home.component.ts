@@ -12,13 +12,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 
 
   ngOnInit(): void{
-    if (this.component.loged === false) {
-      this.router.navigate(['/login']);
-    }
   }
 
   ngOnDestroy(): void {
-    this.component.loged = false
   }
 
   array = [

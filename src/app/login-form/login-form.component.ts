@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { user } from '../interfaces/user';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { AppComponent } from '../app.component';
 
 @Component({
@@ -10,7 +10,9 @@ import { AppComponent } from '../app.component';
 })
 export class LoginFormComponent {
 
-  constructor(private router: Router, private route: ActivatedRoute, private comp: AppComponent){}
+  constructor(
+    private router: Router,
+    private comp: AppComponent){}
 
   example: user[] = [
     {
@@ -31,11 +33,14 @@ export class LoginFormComponent {
   procesar(){
     if (this.example.find(user => user.email === this.userForm.email && user.password === this.userForm.password)) {
       this.router.navigate(['/home'])
-      this.comp.loged = true;
+      //this.comp.loged = true;
       console.log('Access granted');
     } else{
       console.log('Access denied');
       
     }
+  }
+
+  login(){
   }
 }

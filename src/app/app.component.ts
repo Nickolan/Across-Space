@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  loged : boolean = false;
+  //loged : boolean = false;
   title = 'Through Space';
 }

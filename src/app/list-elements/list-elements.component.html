@@ -1,8 +1,9 @@
 <div  style="width: 100%; height: 100%;">
     <ul style="width: 100%; height: 100%;">
-        <li id="spaceBody" *ngFor="let element of listElementsService.elements">
-                <img  src={{element.image}} alt="">
+        <li id="spaceBody" *ngFor="let element of planetsService.dataFromApi">
+            <a href="home/{{element.id}}">
+                <img src="{{element.image}}" alt="{{element.name}}">
+            </a>
         </li>
     </ul>
-    <button onclick="bringAll()" class="btn btn-primary">Bring All</button>
 </div>

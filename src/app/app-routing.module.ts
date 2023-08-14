@@ -4,6 +4,8 @@ import { LandingComponent } from './landing/landing.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { DetailComponent } from './detail/detail.component';
+import { SatelliteComponent } from './satellite/satellite.component';
 
 const routes: Routes = [
   {
@@ -17,6 +19,14 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginFormComponent
+  },
+  {
+    path: 'home/:planetId',
+    component: DetailComponent
+  },
+  {
+    path: 'satellite/:satelliteName',
+    component: SatelliteComponent
   },
   {
     path: '**',

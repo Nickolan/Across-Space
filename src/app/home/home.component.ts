@@ -10,6 +10,7 @@ import { AppComponent } from '../app.component';
 export class HomeComponent implements OnInit, OnDestroy {
   constructor(private router: Router, private component: AppComponent){}
 
+  image: string = 'https://i.pinimg.com/originals/a1/01/e2/a101e22fc458c1110d418ee309f240c8.png'
 
   ngOnInit(): void{
   }
@@ -17,11 +18,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
   }
 
-  array = [
-    {
-      image: 'https://i.pinimg.com/originals/a1/01/e2/a101e22fc458c1110d418ee309f240c8.png'
-    }
-  ];
+    
+    
 
 
 }

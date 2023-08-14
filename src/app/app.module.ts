@@ -12,6 +12,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ListElementsComponent } from './list-elements/list-elements.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { FormsModule } from '@angular/forms';
+import { SatelliteComponent } from './satellite/satellite.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FormsModule } from '@angular/forms';
     NotFoundComponent,
     ListElementsComponent,
     LoginFormComponent,
+    SatelliteComponent,
   ],
   imports: [
     BrowserModule,

@@ -9,21 +9,16 @@ import { Observable } from "rxjs";
 export class PlanetsService {
 
   BASE_URL = 'http://localhost:3000';
+  dataFromApi: any;
+  onePlanet: any;
   constructor(private http: HttpClient) { }
 
   getPlanets(): Observable<elements[]>{
-    let response = this.http.request<elements[]>('GET', `http://localhost:3000/planets`, {responseType:'json'});
-    console.log(response)
-    console.log('Done');
+    let response = this.http.request<elements[]>('GET', `http://localhost:3000/planets`);
     return response;
-    
-    
-    
-    //return this.http.request<elements[]>('GET', `http://localhost:3000/planets`, {responseType:'json'});
-    //return this.http.get<elements[]>(`${this.BASE_URL}/planets`)
   }
-  getPlanet(id: number): Observable<elements>{
-    return this.http.get<elements>(`${this.BASE_URL}/planets/${id}`)
+  getPlanet(planetId: string): Observable<elements>{
+    return this.http.get<elements>(`${this.BASE_URL}/planets/${planetId}`)
   }
   createPlanet(){}
   detelPlanet(id: number){}

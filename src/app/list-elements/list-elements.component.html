@@ -1,7 +1,7 @@
 <div  style="width: 100%; height: 100%;">
     <ul style="width: 100%; height: 100%;">
         <li id="spaceBody" *ngFor="let element of planetsService.dataFromApi">
-            <a href="home/{{element.id}}">
+            <a href="home/{{element.name}}">
                 <img src="{{element.image}}" alt="{{element.name}}">
             </a>
         </li>

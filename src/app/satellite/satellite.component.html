@@ -1,7 +1,12 @@
-<div id="satelliteContent" class="d-flex flex-row text-light justify-content-center align-items-center">
-    <div>
-        <h1>Name: {{satelliteService.satelliteData.name}}</h1>
-        <h2>Size: {{satelliteService.satelliteData.size}} Km</h2>
+<div id="satelliteContent" class="d-flex flex-column text-light justify-content-evenly align-items-center ">
+    <div id="detailStyle" class="d-flex flex-row border border-5 border-primary justify-content-center align-items-center p-5" style="width: 60%;">
+        <div class="d-flex flex-column justify-content-evenly align-items-start text-primary mx-3 p-4" style="width: 50%; height: 50%;">
+            <h1>Name: {{satelliteService.satelliteData.name}}</h1>
+            <h2>Size: {{satelliteService.satelliteData.size}} Km</h2>
+        </div>
+        <img class="border border-3 border-primary rounded-circle" style="width: 50%;" src={{satelliteService.satelliteData.image}} alt="">
     </div>
-    <img class="border border-3 border-primary rounded-circle" style="width: 30%;" src={{satelliteService.satelliteData.image}} alt="">
+    <div>
+        <button (click)="goBack()" class="btn btn-outline-primary" style="width: 6rem; height: 3rem;">Back</button>
+    </div>
 </div>

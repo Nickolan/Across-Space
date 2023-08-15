@@ -6,6 +6,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { DetailComponent } from './detail/detail.component';
 import { SatelliteComponent } from './satellite/satellite.component';
+import { SignupFormComponent } from './signup-form/signup-form.component';
 
 const routes: Routes = [
   {
@@ -17,11 +18,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'login',
-    component: LoginFormComponent
-  },
-  {
-    path: 'home/:planetId',
+    path: 'home/:planetName',
     component: DetailComponent
   },
   {

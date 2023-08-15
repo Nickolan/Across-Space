@@ -1,14 +1,19 @@
-<div id="detailContent" class="d-flex flex-row text-light justify-content-center align-items-center">
-    <div class="d-flex flex-column justify-content-between" style="width: 30%; height: 50%;">
-        <h2>Name: {{planetsService.onePlanet.name}}</h2>
-        <h2>Size: {{planetsService.onePlanet.size}} Km</h2>
-        <h2>Distance With Earth: {{planetsService.onePlanet.distanceWithEarth}} Km</h2>
-        <div class="d-flex flex-row">
-            <h2>Satellite/s: </h2>
+<div id="detailContent" class="d-flex flex-column text-light justify-content-center align-items-center">
+    <div id="borderStyle" class="d-flex flex-row border border-5 border-primary justify-content-center align-items-center p-5" style="width: 70%; height: 75%;">
+        <div class="d-flex flex-column justify-content-between" style="width: 50%; height: 50%;">
+            <h2>Name: {{planetsService.onePlanet.name}}</h2>
+            <h2>Size: {{planetsService.onePlanet.size}} Km</h2>
+            <h2>Distance With Earth: {{planetsService.onePlanet.distanceWithEarth}} Km</h2>
+            <div class="d-flex flex-row">
+                <h2>Satellite/s: </h2>
                 <div class="d-flex flex-row " id="spaceBody" *ngFor="let element of planetsService.onePlanet.satellite">
                     <a class="mx-4" href="satellite/{{element.name}}"><h2>{{element.name}}</h2></a>
                 </div>
+            </div>
         </div>
+        <img style="width: 60%;" src={{planetsService.onePlanet.image}} alt="">
     </div>
-    <img style="height: 60%;" src={{planetsService.onePlanet.image}} alt="">
+    <div>
+        <button (click)="goBack()" class="btn btn-outline-primary mt-4" style="width: 6rem; height: 3rem;">Back</button>
+    </div>
 </div>

@@ -6,4 +6,8 @@
     width: auto;
     box-sizing: border-box;
     background-repeat: no-repeat;
+    
+}
+#detailContent #borderStyle{
+    box-shadow: 1px 1px 1px blue, 0 0 1em blue, 0 0 0.2em blue;
 }

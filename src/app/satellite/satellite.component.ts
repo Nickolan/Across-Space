@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SatellitesService } from '../service/satellites.service';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-satellite',
@@ -10,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class SatelliteComponent implements OnInit {
   satelliteName: string = '';
 
-  constructor(public satelliteService: SatellitesService, private route: ActivatedRoute){}
+  constructor(public satelliteService: SatellitesService, private route: ActivatedRoute, private Location: Location){}
 
   ngOnInit(): void{
     this.route.params.subscribe(params => this.satelliteName = params['satelliteName']);
@@ -18,5 +20,10 @@ export class SatelliteComponent implements OnInit {
       this.satelliteService.satelliteData = data;
       console.log(this.satelliteService.satelliteData)
     })
+  }
+
+
+  goBack(){
+    this.Location.back();
   }
 }

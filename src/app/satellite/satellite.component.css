@@ -7,3 +7,11 @@
     box-sizing: border-box;
     background-repeat: no-repeat;
 }
+
+#satelliteContent #detailStyle{
+    box-shadow: 1px 1px 1px blue, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+#satelliteContent #detailStyle img{
+    box-shadow: 2px 2px 2px blue, 0 0 3em blue, 0 0 0.5em blue;
+}

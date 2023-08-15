@@ -7,19 +7,9 @@ import { AppComponent } from '../app.component';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class HomeComponent {
   constructor(private router: Router, private component: AppComponent){}
 
   image: string = 'https://i.pinimg.com/originals/a1/01/e2/a101e22fc458c1110d418ee309f240c8.png'
-
-  ngOnInit(): void{
-  }
-
-  ngOnDestroy(): void {
-  }
-
-    
-    
-
 
 }

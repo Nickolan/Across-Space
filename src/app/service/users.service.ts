@@ -20,4 +20,8 @@ export class UsersService {
   login(User: user): Observable<access>{
     return this.http.post<access>(`${this.BASE_URL}/users/login`, User)
   }
+
+  adminAccess(User: user): Observable<access>{
+    return this.http.post<access>(`${this.BASE_URL}/users/admin/access`, User)
+  }
 }

@@ -1,0 +1,9 @@
+#adminContainer{
+    background: url('https://cdn.wallpapersafari.com/97/32/1swBbJ.png');
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: auto;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}

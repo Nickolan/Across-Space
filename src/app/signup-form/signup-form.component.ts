@@ -9,7 +9,7 @@ export class SignupFormComponent {
 
   userForm: user = {
     email: '',
-    usrname: '',
+    username: '',
     password: '',
   }
 

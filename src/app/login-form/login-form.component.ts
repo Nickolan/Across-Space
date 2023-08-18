@@ -18,13 +18,17 @@ export class LoginFormComponent {
 
   userForm: user = {
     email: '',
+    username: '',
     password: '',
   }
 
   login(){
-    this.userService.login(this.userForm).subscribe(data => {
+    this.userService.adminAccess(this.userForm).subscribe(data => {
       this.userService.userResponse = data;
       console.log(this.userService.userResponse)
+      if (this.userService.userResponse.Access === true) {
+        this.router.navigate(['/admin/dashboard']);
+      }
     })
   }
 }

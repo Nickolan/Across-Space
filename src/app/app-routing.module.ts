@@ -7,6 +7,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { DetailComponent } from './detail/detail.component';
 import { SatelliteComponent } from './satellite/satellite.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,14 @@ const routes: Routes = [
   {
     path: 'home/:planetName',
     component: DetailComponent
+  },
+  {
+    path: 'admin/access',
+    component: LoginFormComponent,
+  },
+  {
+    path: 'admin/dashboard',
+    component: AdminDashboardComponent,
   },
   {
     path: 'satellite/:satelliteName',

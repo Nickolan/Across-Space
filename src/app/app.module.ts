@@ -15,6 +15,8 @@ import { FormsModule } from '@angular/forms';
 import { SatelliteComponent } from './satellite/satellite.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { PlanetFormComponent } from './planet-form/planet-form.component';
+import { SatelliteFormComponent } from './satellite-form/satellite-form.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
     SatelliteComponent,
     SignupFormComponent,
     AdminDashboardComponent,
+    PlanetFormComponent,
+    SatelliteFormComponent,
   ],
   imports: [
     BrowserModule,

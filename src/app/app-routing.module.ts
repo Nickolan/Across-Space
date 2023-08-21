@@ -8,6 +8,8 @@ import { DetailComponent } from './detail/detail.component';
 import { SatelliteComponent } from './satellite/satellite.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { PlanetFormComponent } from './planet-form/planet-form.component';
+import { SatelliteFormComponent } from './satellite-form/satellite-form.component';
 
 const routes: Routes = [
   {
@@ -29,6 +31,16 @@ const routes: Routes = [
   {
     path: 'admin/dashboard',
     component: AdminDashboardComponent,
+    children: [
+      {
+        path: 'planet',
+        component: PlanetFormComponent
+      },
+      {
+        path: 'satellite',
+        component: SatelliteFormComponent
+      }
+    ]
   },
   {
     path: 'satellite/:satelliteName',

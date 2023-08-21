@@ -5,5 +5,5 @@ export interface elements{
     image: string;
     size: number;
     distancewWithEarth: number;
-    satellite: satellites[];
+    satellite?: satellites[];
 }

@@ -27,7 +27,7 @@ export class LoginFormComponent {
       this.userService.userResponse = data;
       console.log(this.userService.userResponse)
       if (this.userService.userResponse.Access === true) {
-        this.router.navigate(['/admin/dashboard']);
+        this.router.navigate(['/admin/dashboard/planet']);
       }
     })
   }

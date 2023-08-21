@@ -12,9 +12,14 @@ export class PlanetFormComponent {
 
   planetForm: elements = {
     name: '',
-    image: '',
+    image: 'https://as2.ftcdn.net/v2/jpg/02/38/07/05/1000_F_238070572_jZPyRoBrHH7RicstomDgzUQuN2r9w5HW.jpg',
     size: 0,
     distancewWithEarth: 0
+  }
+
+
+  createPlanet(){
+    this.planetsService.createPlanet(this.planetForm)
   }
 
 }

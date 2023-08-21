@@ -24,6 +24,8 @@ export class PlanetsService {
   getPlanetbyName(planetName: string): Observable<elements>{
     return this.http.get<elements>(`${this.BASE_URL}/planets/name/${planetName}`)
   }
-  createPlanet(){}
+  createPlanet(planet:elements): Observable<elements[]>{
+    return this.http.post<elements[]>(`${this.BASE_URL}/planets`, planet)
+  }
   detelPlanet(id: number){}
 }

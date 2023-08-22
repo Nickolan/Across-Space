@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   loged : boolean = false;
-  title = 'Through Space';
+  title = 'Across Space';
 }

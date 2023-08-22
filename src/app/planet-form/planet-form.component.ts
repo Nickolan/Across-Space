@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { elements } from '../interfaces/elements';
 import { PlanetsService } from '../service/planets.service';
+import { planets } from '../interfaces/createPlanet';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-planet-form',
@@ -8,18 +9,23 @@ import { PlanetsService } from '../service/planets.service';
   styleUrls: ['./planet-form.component.css']
 })
 export class PlanetFormComponent {
-  constructor(private planetsService: PlanetsService){}
+  constructor(private planetsService: PlanetsService, private router: Router){}
 
-  planetForm: elements = {
+  planetForm: planets = {
     name: '',
-    image: 'https://as2.ftcdn.net/v2/jpg/02/38/07/05/1000_F_238070572_jZPyRoBrHH7RicstomDgzUQuN2r9w5HW.jpg',
-    size: 0,
-    distancewWithEarth: 0
+    size: 3,
+    image: 'https://i.pinimg.com/474x/86/77/7e/86777e0a74d4ae01ee489fe74cf74d5b.jpg',
+    distanceWithEarth: 0
   }
 
 
   createPlanet(){
-    this.planetsService.createPlanet(this.planetForm)
+    console.log(this.planetForm);
+    this.planetsService.createPlanet(this.planetForm).subscribe(data => {
+      console.log(data);
+    })
+    this.router.navigate(['/home']);
+
   }
 
 }

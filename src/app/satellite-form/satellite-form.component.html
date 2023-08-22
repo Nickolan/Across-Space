@@ -1,31 +1,39 @@
 <div class="d-flex justify-content-center align-items-center flex-column" style="height: 75%;">
     <h1 class="text-light">Create Satellite</h1>
-    <div id="bord" class="border border-2 border-primary d-flex justify-content-center align-items-center" style="height: 70%; width: 70%;">
-        <form class="text-light d-flex flex-column justify-content-center" style="width: 60%;">
+    <div id="bord" class="border border-2 border-primary d-flex justify-content-around align-items-center" style="height: 70%; width: 100%;">
+        <form class="text-light d-flex flex-column justify-content-center" (ngSubmit)="createSatellite()" style="width: 45%;">
             <div class="d-flex flex-column align-items-center">
                 <label class="form-label">Name</label>
 
-                <input type="text" class="form-control bg-transparent border-primary border-2 text-primary"  name="ngModel" >
+                <input type="text" class="form-control bg-transparent border-primary border-2 text-primary"  name="ngModel" [(ngModel)]="satelliteForm.name">
             </div>
 
             <div class="mt-4 mb-4 d-flex flex-column align-items-center">
                 <label class="form-label">Size (Km)</label>
 
-                <input type="number" class="form-control bg-transparent border-primary border-2 text-primary"  name="ngModel" >
+                <input type="number" class="form-control bg-transparent border-primary border-2 text-primary"  name="ngModel" [(ngModel)]="satelliteForm.size">
             </div>
 
             <div class="mb-3 d-flex flex-column align-items-center">
                 <label class="form-label">Image</label>
 
-                <input type="file" class="form-control bg-transparent border-primary border-2 text-primary"  name="ngModel" >
+                <input type="url" class="form-control bg-transparent border-primary border-2 text-primary"  name="ngModel" [(ngModel)]="satelliteForm.image">
             </div>
             
             <div class="mb-3 d-flex flex-column align-items-center">
                 <label class="form-label">Belongs To</label>
 
-                <input type="" class="form-control bg-transparent border-primary border-2 text-primary"  name="ngModel" >
+                <input type="" class="form-control bg-transparent border-primary border-2 text-primary"  name="ngModel" [(ngModel)]="satelliteForm.planetId">
             </div>
             <button type="submit" class="btn btn-primary mt-3">Submit</button>
         </form>
+        <div class="d-flex flex-row justify-content-around align-items-center text-primary" style="width: 48%; height: 80%;">
+            <div class="d-flex flex-column justify-content-around" style="height: 80%;">
+                <h3>Name: {{satelliteForm.name}}</h3>
+                <h3>Size: {{satelliteForm.size}}Km</h3>
+                <h3>Belongs to {{satelliteForm.planetId}}</h3>
+            </div>
+            <img style="width: 50%;" src={{satelliteForm.image}} alt='Image'>
+        </div>
     </div>
 </div>

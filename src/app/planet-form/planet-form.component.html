@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center align-items-center flex-column" style="height: 75%;">
     <h1 class="text-light">Create Planet</h1>
     <div id="bord" class="border border-2 border-primary d-flex justify-content-around align-items-center" style="height: 80%; width: 100%;">
-        <form class="text-light d-flex flex-column justify-content-center" style="width: 45%;">
+        <form class="text-light d-flex flex-column justify-content-center" (ngSubmit)="createPlanet()" style="width: 45%;">
             <div class="d-flex flex-column align-items-center">
                 <label class="form-label">Name</label>
 
@@ -22,7 +22,7 @@
             <div class="mb-3 d-flex flex-column align-items-center">
                 <label class="form-label">Distance With Earth (Km)</label>
 
-                <input type="number" class="form-control bg-transparent border-primary border-2 text-primary"  name="ngModel" [(ngModel)]="planetForm.distancewWithEarth">
+                <input type="number" class="form-control bg-transparent border-primary border-2 text-primary"  name="ngModel" [(ngModel)]="planetForm.distanceWithEarth">
             </div>
             <button type="submit" class="btn btn-primary mt-3">Submit</button>
         </form>
@@ -30,7 +30,7 @@
             <div class="d-flex flex-column justify-content-around" style="height: 80%;">
                 <h3>Name: {{planetForm.name}}</h3>
                 <h3>Size: {{planetForm.size}} Km</h3>
-                <h3>Distance to Earth: {{planetForm.distancewWithEarth}} Km</h3>
+                <h3>Distance to Earth: {{planetForm.distanceWithEarth}} Km</h3>
             </div>
             <img style="width: 50%;" src={{planetForm.image}} alt={{planetForm.name}}>
         </div>
